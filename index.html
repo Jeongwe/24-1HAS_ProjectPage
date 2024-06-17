@@ -267,48 +267,43 @@
             Fig. 1의 X축은 변수의 중요도를 나타내며 값이 클수록 해당 변수가 모델의 예측에 더 큰 영향을 미쳤음을 의미한다. Y축은 각 특성의 이름이며, 영향력이 가장 큰 상위 10%의 변수가 표시된다. 혈압 차이 변수가 가장 영향력이 높은 것으로 나타난다. 이는 고혈압 예측에 있어서 수축기 혈압과 이완기 혈압의 차이가 의미 있음을 보여준다. 제공된 건강검진 데이터 외의 새로운 변수들이 모델의 고혈압 예측에 높은 영향력을 행사하였음을 알 수 있다. 혈압 차이 변수, 허리-키 비율, BMI, 콜레스테롤 대비 HDL 비율이 기존 변수를 활용하여 생성한 변수이다. 이를 통해 예측 성능 향상을 위해서 새로운 변수 생성은 효과적임을 알 수 있으며, 기존 유사한 변수들의 차이 값 또는 비율을 계산하여 변수를 생성하는 것이 효율적이다. Fig. 2는 모델의 성능을 시각적으로 보여주는 Confusion Matrix이다.
           </p>
             <img src="static/images/Confusion_matrix.png" alt="Confusion matrix Plot">
-            <p class="image-caption">Fig. 2. 모델의 confusion matrix</p>
+            <p class="image-caption">Fig. 2. Confusion matrix</p>
           <p>
             Fig.2의 1사분면은 정답은 고혈압이 아닌데 모델이 고혈압이라고 잘못 예측한 False Positive(FP), 2사분면은 정답과 예측이 모두 고혈압이 아닌 경우인 True Negative(TN), 3사분면은 정답은 고혈압인데 모델이 고혈압이 아니라고 잘못 예측한 False Negative(FN) 그리고 4사분면은 예측과 정답 모두 고혈압인 True Positive(TP)이다. 사분면 내의 값은 샘플 수이다. 본 보고서의 모델은 높은 TN 값으로 인해 정확도가 90.8%로 높게 측정되었다. 이는 모델이 고혈압이 아닌 경우를 매우 잘 예측하고 있음을 알 수 있다. FP 값도 비교적 높아, 고혈압이 아닌 경우를 고혈압으로 잘못 예측하는 경향을 보인다. 이는 일반적으로 안 좋은 경우이지만, 고혈압인 환자에게 고혈압이 아니라고 잘못 예측한 것보다 나은 경우이므로 의료 현장에서 본 보고서의 모델이 사용될 경우 크게 문제되지 않는 사항이다. 그러나 실제 고혈압 환자를 놓치는 경우인 FN 값도 존재하므로 모델의 개선이 필요하다. 중요한 변수를 생성하여 모델의 예측력을 높이거나 새로운 모델을 사용하여 재현율을 최적화할 수도 있다. Fig. 3은 Receiver Operating Characteristic(ROC) 곡선과 Area Under the Curve(AUC)이다.
           </p>
             <img src="static/images/ROC.png" alt="ROC and AUC">
-            <p class="image-caption">Fig. 3. 모델의 ROC 곡선</p>
-        </div>
-        
-          <!--
-          <img src="static/images/mild.png" alt="MY ALT TEXT"/>
-        <div class="content has-text-justified">
+            <p class="image-caption">Fig. 3. ROC curve</p>
           <p>
-            Description.
+            Fig. 3의 X축은 False Positive Rate(FPR)으로 고혈압이 아닌데 모델이 고혈압으로 잘못 예측한 비율을 나타내며, Y축은 ‘민감도(Recall)’라고도 불리는 True Positive Rate(TPR)이다. TPR은 고혈압 환자에게 고혈압으로 예측한 비율을 의미한다. Fig. 3에서 ROC 곡선 아래의 면적인 Area Under the Curve(AUC) 값이 0.92로, 모델이 고혈압과 고혈압이 아닌 경우를 매우 잘 구분하고 있음을 나타낸다. ROC 곡선은 왼쪽 위 코너에 가까울수록 모델 성능이 좋다는 것을 의미한다. 이 모델의 ROC 곡선은 왼쪽 상단에 상당히 가깝게 위치해 있으며, 높은 TPR과 낮은 FPR을 가지고 있음을 나타낸다. Fig. 4는 정밀도-재현율 곡선을 보여준다. <br>
+          </p>
+            <img src="static/images/Precision_curve.png" alt="Precision curve">
+            <p class="image-caption">Fig. 4. Precision-Recall curve</p>
+          <p>
+            Fig. 4의 X축은 재현율을 나타내고 Y축은 정밀도를 나타낸다. 정밀도-재현율 곡선의 모양은 왼쪽 상단 모서리에 가까울수록 높은 정밀도와 높은 재현율을 가진다는 의미로, 모델의 성능이 좋다. 본 보고서의 모델은 정밀도가 높을수록 재현율이 낮으며 재현율이 높을수록 낮은 정밀도를 보이는 반비례 양상을 가지고 있다. 
           </p>
         </div>
-          
-          <img src="static/images/label_shifts.png" alt="MY ALT TEXT"/>
-        <div class="content has-text-justified">
-          <p>
-            Description.
-          </p>
-        </div>
-          
-        <img src="static/images/batch_size1.png" alt="MY ALT TEXT"/>
-        <div class="content has-text-justified">
-          <p>
-            Description.
-          </p>
-        </div>
-          
-        <img src="static/images/biased_scenario.png" alt="MY ALT TEXT"/>
-        <div class="content has-text-justified">
-          <p>
-            Description.
-          </p>
-        </div>
-        -->
       </div>
     </div>
   </div>
 </section>
 <!-- End Experiments -->
+  
+<!-- Conclusion -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Reference</h2>
+        <div class="content has-text-justified">
+          <p>
+            
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Conclusion -->
 
 <!-- Reference -->
 <section class="section hero is-light">
