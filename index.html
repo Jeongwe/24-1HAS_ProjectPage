@@ -268,6 +268,11 @@
           </p>
             <img src="static/images/Confusion_matrix.png" alt="Confusion matrix Plot">
             <p class="image-caption">Fig.2: 모델의 confusion matrix</p>
+          <p>
+            Fig.2의 1사분면은 정답은 고혈압이 아닌데 모델이 고혈압이라고 잘못 예측한 False Positive(FP), 2사분면은 정답과 예측이 모두 고혈압이 아닌 경우인 True Negative(TN), 3사분면은 정답은 고혈압인데 모델이 고혈압이 아니라고 잘못 예측한 False Negative(FN) 그리고 4사분면은 예측과 정답 모두 고혈압인 True Positive(TP)이다. 사분면 내의 값은 샘플 수이다. 본 보고서의 모델은 높은 TN 값으로 인해 정확도가 90.8%로 높게 측정되었다. 이는 모델이 고혈압이 아닌 경우를 매우 잘 예측하고 있음을 알 수 있다. FP 값도 비교적 높아, 고혈압이 아닌 경우를 고혈압으로 잘못 예측하는 경향을 보인다. 이는 일반적으로 안 좋은 경우이지만, 고혈압인 환자에게 고혈압이 아니라고 잘못 예측한 것보다 나은 경우이므로 의료 현장에서 본 보고서의 모델이 사용될 경우 크게 문제되지 않는 사항이다. 그러나 실제 고혈압 환자를 놓치는 경우인 FN 값도 존재하므로 모델의 개선이 필요하다. 중요한 변수를 생성하여 모델의 예측력을 높이거나 새로운 모델을 사용하여 재현율을 최적화할 수도 있다. Fig. 3은 Receiver Operating Characteristic(ROC) 곡선과 Area Under the Curve(AUC)이다.
+          </p>
+            <img src="static/images/ROC" alt="ROC and AUC">
+            <p class="image-caption">Fig.2: 모델의 confusion matrix</p>
         </div>
         
           <!--
