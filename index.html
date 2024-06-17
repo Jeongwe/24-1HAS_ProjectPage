@@ -172,7 +172,7 @@
        <div class="item">
         -->
 
-  
+  <!--
   <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
@@ -182,11 +182,65 @@
         <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
         <div class="content has-text-justified">
           <p>
-            ...
+            데이터는 국민건강보험공단 건강검진정보 2022년 데이터를 활용하였다. 고혈압 라벨링은 수축기 혈압이 140 이상이면서 이완기 혈압이 90 이상을 기준으로 하였다[5]. 건강검진 데이터 내 수축기 혈압과 이완기 혈압의 결측치 개수는 5,556개였다. 따라서 결측치를 제외한 994,443개의 수축기 혈압과 이완기 혈압 변수를 활용하여 각 환자마다 고혈압을 0 또는 1로 라벨링하였다. 예측 성능을 높이기 위해 건강검진 데이터 내의 변수를 활용하여 새로운 변수를 생성하였다. 몸무게와 키를 사용하여 BMI 변수를 생성하였고, 수축기 혈압과 이완기 혈압의 차이를 계산하여 혈압 차이 변수를 생성하였다. 허리둘레를 신장으로 나눈 비율을 계산하여 체지방 분포와 관련 있는 허리-키 비율 변수를 생성하였으며, 총 콜레스테롤 대비 HDL 콜레스테롤 비율 변수와 LDL 대비 HDL 콜레스테롤 비율 변수 그리고 흡연과 음주의 상호작용이 고혈압에 미치는 영향을 고려하기 위해 흡연과 음주를 곱한 값을 변수로 저장하였다. 또한 간 효소 수치를 나타내는 AST, ALT, 감마지티피를 더하여 종합적인 간 건강 상태를 나타내는 변수를 생성하였다. 식1은 BMI 계산 방법을 나타낸다.
           </p>
         </div>
       </div>
       <div class="item">
+      -->
+
+
+        
+      <!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Method Section with BMI Formula</title>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        .section {
+            padding: 20px;
+        }
+        .content {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .formula {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+        <!-- Your image here -->
+        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <div class="content has-text-justified">
+          <p>
+            데이터는 국민건강보험공단 건강검진정보 2022년 데이터를 활용하였다. 고혈압 라벨링은 수축기 혈압이 140 이상이면서 이완기 혈압이 90 이상을 기준으로 하였다[5]. 건강검진 데이터 내 수축기 혈압과 이완기 혈압의 결측치 개수는 5,556개였다. 따라서 결측치를 제외한 994,443개의 수축기 혈압과 이완기 혈압 변수를 활용하여 각 환자마다 고혈압을 0 또는 1로 라벨링하였다. 예측 성능을 높이기 위해 건강검진 데이터 내의 변수를 활용하여 새로운 변수를 생성하였다. 몸무게와 키를 사용하여 BMI 변수를 생성하였고, 수축기 혈압과 이완기 혈압의 차이를 계산하여 혈압 차이 변수를 생성하였다. 허리둘레를 신장으로 나눈 비율을 계산하여 체지방 분포와 관련 있는 허리-키 비율 변수를 생성하였으며, 총 콜레스테롤 대비 HDL 콜레스테롤 비율 변수와 LDL 대비 HDL 콜레스테롤 비율 변수 그리고 흡연과 음주의 상호작용이 고혈압에 미치는 영향을 고려하기 위해 흡연과 음주를 곱한 값을 변수로 저장하였다. 또한 간 효소 수치를 나타내는 AST, ALT, 감마지티피를 더하여 종합적인 간 건강 상태를 나타내는 변수를 생성하였다. 식1은 BMI 계산 방법을 나타낸다.
+          </p>
+          <div class="formula">
+            <p><strong>식 1: BMI 계산 방법</strong></p>
+            <p>
+              \[
+              \text{BMI} = \frac{\text{몸무게 (kg)}}{\left( \text{키 (m)} \right)^2}
+              \]
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
+
         
         <!-- Your image here -->
         <!--
